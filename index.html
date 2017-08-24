@@ -53,7 +53,9 @@ var root={"name":"\u7528\u6237","children":[{"name":"\u534e\u4e3a\u8fd0\u8425\u5
       .on("click", click)
       .append("title")
       //.text(function(d) {console.log(d); return d.name + "\n" + formatNumber(d.value/64.84182830974237); });
-	  .text(function(d) {return d.name + "\n" + Math.round(parseInt(d.value) * 10000 /68256)/100+'%'; });
+	  .text(function(d) {return d.name 
+	//  + "\n" + Math.round(parseInt(d.value) * 10000 /68256)/100+'%'
+			     ;});
 
 
 function click(d) {
