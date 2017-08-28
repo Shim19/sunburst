@@ -29,10 +29,10 @@ var partition = d3.layout.partition()
     .value(function(d) { return d.size; });
 
 var arc = d3.svg.arc()
-    .startAngle(function(d) { return Math.max(0, Math.min(2 * Math.PI, x(d.x))); })
-    .endAngle(function(d) { return Math.max(0, Math.min(2 * Math.PI, x(d.x + d.dx))); })
-    .innerRadius(function(d) { return Math.max(0, y(d.y)); })
-    .outerRadius(function(d) { return Math.max(0, y(d.y + d.dy)); });
+    .startAngle(function(d) { return Math.max(0, Math.min(2 * Math.PI, x(d.x)))-10; })
+    .endAngle(function(d) { return Math.max(0, Math.min(2 * Math.PI, x(d.x + d.dx)))-10; })
+    .innerRadius(function(d) { return Math.max(0, y(d.y))-10; })
+    .outerRadius(function(d) { return Math.max(0, y(d.y + d.dy))-10; });
 
 var svg = d3.select("body").append("svg")
     .attr("width", width)
